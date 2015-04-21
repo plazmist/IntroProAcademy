@@ -8,7 +8,7 @@ public class Main {
         Anagramm anag1 = new Anagramm();
         anag1.setMyCharArray(input);
         System.out.println("What we have    : " + anag1.getMyCharArray());
-        anag1.anagrammString();
+        anag1.anagrammString(true);
         System.out.println("What we have got: " + anag1.getMyCharArray() + "\n");
 
     }
