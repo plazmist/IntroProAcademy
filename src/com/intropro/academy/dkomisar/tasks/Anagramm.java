@@ -1,4 +1,4 @@
-package com.dkomisar.task1;
+package com.intropro.academy.dkomisar.tasks;
 
 /**
  * Created by dkomisar on 4/20/15.
