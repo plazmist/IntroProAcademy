@@ -28,6 +28,8 @@ public class Main {
 */
     public static void main(String[] args) {
     //showAnagramm();
-        VisualMath.multiplication(321,987654321);
+        //VisualMath.longMultiplication(1111,987654321);
+
+        VisualMath.arrayMultiplication("1111","987654321");
     }
 }
