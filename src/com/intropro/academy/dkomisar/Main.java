@@ -30,6 +30,6 @@ public class Main {
     //showAnagramm();
         //VisualMath.longMultiplication(1111,987654321);
 
-        VisualMath.arrayMultiplication("1111","987654321");
+        VisualMath.arrayMultiplication("11111111111111119","1111111");
     }
 }
