@@ -1,5 +1,7 @@
 package com.intropro.academy.dkomisar.tasks;
 
+import javax.xml.bind.SchemaOutputResolver;
+
 public class VisualMath {
 
     private static int DEEP;
@@ -24,6 +26,31 @@ public class VisualMath {
         for (int i = 0; i < DEEP+1; i++) System.out.print("-");
         System.out.println();
         printFromEnd(a*b,0);
+    }
+
+    public static long longDivision(long a, long b){
+        System.out.println(a + "|" + b);
+        long realRes=a/b,currentPower=1;
+        int powerA=Long.toString(a).length();
+        int k,offset=0;
+        long littleRes, littleA, Res=0;
+        while (a>b) {
+            k=0;
+
+            while ((a>0) && (a / Math.pow(10, powerA - k) < b)) {k++;}
+            littleA=(long) (a / Math.pow(10, powerA - k));
+            littleRes = (long) (littleA / b);
+            System.out.println("We have got littleA = " + littleA + " res = " +littleRes + " Res = " + Res);
+            Res=Res*10 + littleRes;
+            if ((littleA - littleRes*b) == 0) Res*=10;
+            a -= littleRes * b * Math.pow(10, powerA - k);
+
+            System.out.println("===== " + a);
+        }
+        System.out.println("Res    = " + Res + " and " + a);
+        System.out.println("realRes= " + realRes );
+
+        return Res;
     }
 
     public static int arrayMultiplication(String a, String b){
@@ -89,6 +116,13 @@ public class VisualMath {
     }
 
     private static void printFromEnd(long value,int offset){
+        for (int i = 0; i < 1+ DEEP - getValueLength(value) - offset; i++) {
+            System.out.print(" ");
+        }
+        System.out.println(value);
+    }
+
+    private static void printFromBegin(long value,int offset){
         for (int i = 0; i < 1+ DEEP - getValueLength(value) - offset; i++) {
             System.out.print(" ");
         }
