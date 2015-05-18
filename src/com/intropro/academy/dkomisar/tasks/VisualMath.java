@@ -1,6 +1,8 @@
 package com.intropro.academy.dkomisar.tasks;
 
 import javax.xml.bind.SchemaOutputResolver;
+import java.util.ArrayList;
+import java.util.List;
 
 public class VisualMath {
 
@@ -51,6 +53,34 @@ public class VisualMath {
         System.out.println("realRes= " + realRes );
 
         return Res;
+    }
+
+    public static void longDivisionPeriod(long a, long b){
+        System.out.println(a + "|" + b);
+        List<Integer> Res= new ArrayList<Integer>();
+
+
+
+    }
+
+    public static long longDivision(String a, String b){
+        if (!isNumeric(a) || !isNumeric(b)) { System.out.println("You are the stupid asshole!");  return 1;}
+        System.out.println(a + "|" + b);
+        //long realRes=a/b,currentPower=1;
+        byte[] aa = new byte[a.length()];
+        byte[] bb = new byte[b.length()];
+        byte[] cc = new byte[a.length()+1];
+        byte[] result = new byte[a.length()+b.length()+1];
+        for (int i = 0; i < a.length(); i++) {
+            aa[i]= (byte) (a.charAt(a.length()-i-1)-48);
+        }
+        for (int i = 0; i < b.length(); i++) {
+            bb[i]= (byte) (b.charAt(b.length()-i-1)-48);
+        }
+        printFromEnd(aa,0);
+        printFromEnd(bb,0);
+
+        return 0;
     }
 
     public static int arrayMultiplication(String a, String b){

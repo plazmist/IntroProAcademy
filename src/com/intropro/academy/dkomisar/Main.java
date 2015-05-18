@@ -31,6 +31,8 @@ public class Main {
         //VisualMath.longMultiplication(1111,987654321);
 
         //VisualMath.arrayMultiplication("11111111111111119","999");
-        VisualMath.longDivision(505050505,5);
+        //VisualMath.longDivision(505050505,5);
+        VisualMath.longDivision("9876543210","5");
+
     }
 }
